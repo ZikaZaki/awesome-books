@@ -1,0 +1,28 @@
+/* Importing the "normalize.css" file which is for resetting all the default css values */
+@import url("./normalize.css");
+
+/* Importing Fonts */
+@import url('http://fonts.cdnfonts.com/css/lato');
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+
+/* ******Main & Secondary Colors****** */
+:root {
+  --bg_color: #f5f5f5;
+  --primary: #272a31;
+  --secondary: #ec5242;
+  --neutral: #d3d3d3;
+  --lato: "lato", verdana, tahoma, sans-serif;
+  --cocogoose: "cocogoose", verdana, tahoma, sans-serif;
+  --verdana: verdana, tahoma, sans-serif;
+  --Tahoma: tahoma, verdana, sans-serif;
+  --sans-serif: sans-serif, verdana, tahoma;
+}
+
+/* **********Global Classes********** */
+.container {
+  font-family: var(--lato);
+  font-style: normal;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
