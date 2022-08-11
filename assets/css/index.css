@@ -3,16 +3,14 @@
 
 /* Importing Fonts */
 @import url('http://fonts.cdnfonts.com/css/lato');
-@import url('http://fonts.cdnfonts.com/css/cocogoose');
 
 /* ******Main & Secondary Colors****** */
 :root {
-  --bg_color: #f5f5f5;
+  --bg_color: #fff;
   --primary: #272a31;
   --secondary: #ec5242;
   --neutral: #d3d3d3;
   --lato: "lato", verdana, tahoma, sans-serif;
-  --cocogoose: "cocogoose", verdana, tahoma, sans-serif;
   --verdana: verdana, tahoma, sans-serif;
   --Tahoma: tahoma, verdana, sans-serif;
   --sans-serif: sans-serif, verdana, tahoma;
@@ -26,3 +24,107 @@
   padding: 0;
   margin: 0;
 }
+
+/* ======================================Header Start====================================== */
+.header {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary);
+  padding: 0;
+  margin: 0;
+}
+
+/* =======================================Header End======================================= */
+
+/* =================================Headline-Section Start================================= */
+.headline {
+  height: auto;
+  background-color: var(--bg_color);
+  padding: 0;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  padding: 25px;
+}
+
+.page-title h1 {
+  margin: 0;
+}
+
+.underline {
+  height: 2.5px;
+  width: 15rem;
+  background-color: var(--primary);
+}
+
+/* ==================================Headline-Section End================================== */
+
+/* =============================Books-Collection-Section Start============================= */
+.books-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  background-color: var(--bg_color);
+  padding: 25px 75px;
+}
+
+.books-list,
+h2,
+h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background-color: var(--neutral);
+  gap: 5px;
+  width: 100%;
+  padding: 15px 15px 5px;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* ==============================Books-Collection-Section End============================== */
+
+/* ================================Books-Form-Section Start================================ */
+.books-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* align-items: center; <= Affects the width property */
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: var(--bg_color);
+  height: auto;
+  padding: 25px 75px;
+}
+
+.form-title .underline {
+  width: 11rem;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--primary);
+  list-style: none;
+  gap: 15px;
+  padding: 15px;
+  margin: 0;
+}
+
+/* =================================Books-Form-Section End================================= */
