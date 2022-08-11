@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <title>Awesome Books</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container header">
+            <!-- This container is for the header section -->
+        </div>
+    </header>
+    <section class="container headline">
+        <div class="page-title">
+            <h1>Awesome Books</h1>
+            <div class="underline"></div>
+        </div>
+    </section>
+    <section class="container books-collection">
+        <div id="books_list" class="books-list">
+            <!-- Books object will be generated using JavaScript -->
+        </div>
+    </section>
+    <section class="container books-form">
+        <div class="form-title">
+            <h2>Add a new book</h2>
+            <div class="underline"></div>
+        </div>
+        <form action="">
+            <ul class="form-list">
+                <li class="form-item">
+                    <label for="title" hidden>Title</label>
+                    <input 
+                    id="title_field" 
+                    type="text" 
+                    placeholder="Title" 
+                    maxlength="100" 
+                    required>
+                </li>
+                <li class="form-item">
+                    <label for="author" hidden>Author</label>
+                    <input 
+                    id="author_field" 
+                    type="text" 
+                    placeholder="Author" 
+                    maxlength="200" 
+                    required>
+                </li>
+                <li class="form-item">
+                    <button id="add_book_btn" class="form-add-btn" type="submit">Add</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+    <!-- JavaScript Files -->
+    <script type="module" src="./assets/js/index.js"></script>
 </body>
 </html>
