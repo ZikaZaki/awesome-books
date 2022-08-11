@@ -21,7 +21,9 @@ function deleteBook(e) {
     e.target.parentNode.parentNode.querySelector('.book-title h2').innerText,
     e.target.parentNode.parentNode.querySelector('.book-author h3').innerText,
   );
-  booksList.splice(booksList.indexOf(book), 1);
+  // remove the book element from the list
+  let index= booksList.findIndex((object) => object.title === book.title && object.author === book.author)
+  booksList.splice(index, 1);
   localStorage.setItem('Books-List', JSON.stringify(booksList));
   e.target.parentNode.parentNode.remove();
 }
