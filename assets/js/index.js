@@ -72,10 +72,11 @@ window.onload = () => {
     const localBooks = JSON.parse(localStorage.getItem('Books-List'));
     localBooks.forEach((book) => {
       booksList.push(new Book(book.title, book.author));
+      renderBook(new Book(book.title, book.author));
     });
 
-    booksList.forEach((book) => {
-      renderBook(book);
-    });
+    // booksList.forEach((book) => {
+    //   renderBook(book);
+    // });
   }
 };
