@@ -78,9 +78,5 @@ window.onload = () => {
       booksList.push(new Book(book.title, book.author));
       renderBook(new Book(book.title, book.author));
     });
-
-    // booksList.forEach((book) => {
-    //   renderBook(book);
-    // });
   }
 };
