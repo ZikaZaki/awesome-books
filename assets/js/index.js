@@ -1,14 +1,29 @@
-// Global variables
-const booksList = [];
-const addBookBtn = document.querySelector('#add_book_btn');
-// let removeBookBtn;
+import Book from './book.js';
 
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
+class BooksList {
+  constructor() {
+    this.books = [];
+    this.count = 0;
+  }
+
+  add(book) {
+    this.books.push(book);
+    this.count += 1;
+  }
+
+  getAll() {
+    return this.books;
+  }
+
+  remove(book) {
+    this.books = this.books.filter((b) => b.title !== book.title && b.author !== book.author);
+    this.count -= 1;
   }
 }
+
+/*= ====Global variables===== */
+const booksList = new BooksList();
+const addBookBtn = document.querySelector('#add_book_btn');
 
 /*
 function deleteBook(e):-
@@ -21,12 +36,10 @@ function deleteBook(e) {
     e.target.parentNode.parentNode.querySelector('.book-title h2').innerText,
     e.target.parentNode.parentNode.querySelector('.book-author h3').innerText,
   );
-  // remove the book element from the list
-  const index = booksList.findIndex(
-    (obj) => obj.title === book.title && obj.author === book.author,
-  );
-  booksList.splice(index, 1);
-  localStorage.setItem('Books-List', JSON.stringify(booksList));
+  // Remove book from the list
+  booksList.remove(book);
+  // Reset Local Storage
+  localStorage.setItem('Books-List', JSON.stringify(booksList.books));
   e.target.parentNode.parentNode.remove();
 }
 
@@ -39,22 +52,26 @@ function renderBook(book) {
   const bookElement = document.createElement('div');
   bookElement.classList.add('book-item');
   bookElement.innerHTML = `
-        <div class="book-title">
-            <h2>${book.title}</h2>
-        </div>
-        <div class="book-author">
-            <h3>${book.author}</h3>
-        </div>
+        <div class="book-info">
+          <div class="book-title">
+              <h2>${book.title}</h2>
+          </div>
+          <div class="book-author">
+              <h3>${book.author}</h3>
+          </div>
+        </div>  
         <div class="remove-btn">
-            <button id="remove_book_btn" type="button">Remove</button>
+            <button id="remove_book_btn" class="normal-btn" type="button">Remove</button>
         </div>
     `;
+  // Set the event listener for the remove button
   bookElement.querySelector('#remove_book_btn').addEventListener('click', (e) => {
     deleteBook(e);
   });
   document.querySelector('.books-list').appendChild(bookElement);
 }
 
+// Add Button click event listener
 addBookBtn.addEventListener('click', () => {
   const title = document.querySelector('#title_field').value;
   const author = document.querySelector('#author_field').value;
@@ -62,21 +79,20 @@ addBookBtn.addEventListener('click', () => {
     throw new Error('Please fill in all fields');
   }
   const book = new Book(title, author);
-  booksList.push(book);
+  booksList.add(book);
   renderBook(book);
-  localStorage.setItem('Books-List', JSON.stringify(booksList));
-  title.value = '';
-  author.value = '';
+  localStorage.setItem('Books-List', JSON.stringify(booksList.books));
+  document.querySelector('#title_field').value = '';
+  document.querySelector('#author_field').value = '';
 });
 
 window.onload = () => {
   if (localStorage.getItem('Books-List') === null) {
-    localStorage.setItem('Books-List', JSON.stringify([]));
+    localStorage.setItem('Books-List', JSON.stringify(booksList.books));
   } else {
-    const localBooks = JSON.parse(localStorage.getItem('Books-List'));
-    localBooks.forEach((book) => {
-      booksList.push(new Book(book.title, book.author));
-      renderBook(new Book(book.title, book.author));
+    JSON.parse(localStorage.getItem('Books-List')).forEach((book) => {
+      booksList.add(book);
+      renderBook(book);
     });
   }
 };

@@ -49,7 +49,7 @@
   align-items: center;
   text-align: center;
   gap: 5px;
-  padding: 25px;
+  padding: 35px;
 }
 
 .page-title h1 {
@@ -67,34 +67,49 @@
 /* =============================Books-Collection-Section Start============================= */
 .books-collection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  min-width: 600px;
   height: auto;
   background-color: var(--bg_color);
-  padding: 25px 75px;
+  padding: 35px 165px;
 }
 
-.books-list,
-h2,
-h3 {
+.books-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid var(--primary);
   width: 100%;
-  margin: 0;
 }
 
 .book-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   text-align: justify;
   background-color: var(--neutral);
-  gap: 5px;
   width: 100%;
-  padding: 15px 15px 5px;
-  border-bottom: 2px solid var(--primary);
+  padding: 10px;
+
+  /* border-bottom: 2px solid var(--primary); */
+}
+
+.book-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.book-info h2,
+h3 {
+  margin: 0;
 }
 
 /* ==============================Books-Collection-Section End============================== */
@@ -104,27 +119,42 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  /* align-items: center; <= Affects the width property */
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   background-color: var(--bg_color);
   height: auto;
-  padding: 25px 75px;
+  padding: 35px 165px;
 }
 
 .form-title .underline {
-  width: 11rem;
+  width: auto;
 }
 
 .form-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 2px solid var(--primary);
   list-style: none;
   gap: 15px;
   padding: 15px;
   margin: 0;
+  width: 100%;
+}
+
+.form-list li input {
+  border: 2px solid var(--primary);
+  width: 300px;
+  height: 2rem;
+}
+
+.normal-btn {
+  box-shadow: 3px 3px;
+  border: 2px solid var(--primary);
+  min-width: 45px;
+  min-height: 25px;
 }
 
 /* =================================Books-Form-Section End================================= */
