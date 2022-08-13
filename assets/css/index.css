@@ -92,11 +92,13 @@
   justify-content: space-between;
   align-items: center;
   text-align: justify;
-  background-color: var(--neutral);
+  background-color: var(--bg_color);
   width: 100%;
   padding: 10px;
+}
 
-  /* border-bottom: 2px solid var(--primary); */
+.book-item:nth-child(odd) {
+  background-color: var(--neutral);
 }
 
 .book-info {
