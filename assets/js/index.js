@@ -73,11 +73,13 @@ function renderBook(book) {
 
 // Add Button click event listener
 addBookBtn.addEventListener('click', () => {
-  const title = document.querySelector('#title_field').value;
-  const author = document.querySelector('#author_field').value;
+  let title = document.querySelector('#title_field').value;
+  let author = document.querySelector('#author_field').value;
   if (title === '' || author === '') {
     throw new Error('Please fill in all fields');
   }
+  title = `"${title}"`;
+  author = `by ${author}`;
   const book = new Book(title, author);
   booksList.add(book);
   renderBook(book);
