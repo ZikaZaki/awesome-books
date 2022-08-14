@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - [x] **[Google Chrome](https://www.google.com/chrome/)** or other web browser.
-- [x] **[Git](https://git-scm.com/downloads** version control system.
+- [x] **[Git](https://git-scm.com/downloads)** version control system.
 - [x] **[VS Code](https://code.visualstudio.com/download)** or other code editors.
 
 ### Setup
