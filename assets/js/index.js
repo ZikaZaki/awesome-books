@@ -1,4 +1,5 @@
 import Book from './book.js';
+import { DateTime } from './luxon.js';
 
 class BooksList {
   constructor() {
@@ -24,6 +25,8 @@ class BooksList {
 /*= ====Global variables===== */
 const booksList = new BooksList();
 const addBookBtn = document.querySelector('#add_book_btn');
+const mainDate = document.getElementById('main_date');
+mainDate.innerText = DateTime.local().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 
 /*
 function deleteBook(e):-

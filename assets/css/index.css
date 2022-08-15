@@ -59,6 +59,24 @@ h3 {
 
 /* =======================================Navigation End===================================== */
 
+/* =====================================Main-Wrapper Start=================================== */
+.main-wrapper {
+ 
+}
+
+.main-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--primary);
+  padding: 5px 85px;
+  width: 100%;
+}
+
+/* ======================================Main-Wrapper End==================================== */
+
 /* =============================Books-Collection-Section Start============================= */
 .books-collection {
   display: flex;
@@ -70,7 +88,7 @@ h3 {
   width: 100%;
   height: auto;
   background-color: var(--bg_color);
-  padding: 35px 65px;
+  padding: 20px 65px;
 }
 
 .books-collection .title {
