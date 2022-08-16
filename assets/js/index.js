@@ -14,7 +14,15 @@ nav.addClickEventListener();
 displayDate();
 
 window.onload = () => {
+  if (localStorage.getItem('Books-List') === null) {
+    localStorage.setItem('Books-List', JSON.stringify(booksListPage.bookslist));
+  } else {
+    JSON.parse(localStorage.getItem('Books-List')).forEach((book) => {
+      booksListPage.bookslist.add(book);
+    });
+  }
   document.getElementById('home_btn').click();
   // mainContentDiv.innerHTML = pages.booksCollection;
   // populateBooksList(booksList);
 };
+
