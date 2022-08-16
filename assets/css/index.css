@@ -146,6 +146,7 @@ nav .start-about,a:nth-child(4):hover~.animation {
 /* =====================================Main-Wrapper Start=================================== */
 .main-wrapper {
   padding-top: 6rem; /* change to 5rem */
+  min-height: 30rem;
 }
 
 .main-date {
@@ -281,8 +282,9 @@ footer {
   justify-content: center;
   align-items: center;
   background: var(--primary);
+  min-height: auto;
   width: 100%;
-  min-height: 100px;
+  height: auto;
   padding: 35px 65px;
 }
 
