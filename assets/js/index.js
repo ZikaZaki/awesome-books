@@ -18,11 +18,9 @@ window.onload = () => {
     localStorage.setItem('Books-List', JSON.stringify(booksListPage.bookslist));
   } else {
     JSON.parse(localStorage.getItem('Books-List')).forEach((book) => {
-      booksListPage.bookslist.add(book);
+      booksListPage.add(book);
     });
   }
   document.getElementById('home_btn').click();
-  // mainContentDiv.innerHTML = pages.booksCollection;
-  // populateBooksList(booksList);
 };
 
