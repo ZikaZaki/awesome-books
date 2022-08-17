@@ -8,6 +8,7 @@
 :root {
   --bg_color: #fff;
   --primary: #2c3e50;
+
   /* --primary: #202c38; */
   --primary_light: #34495e;
   --secondary: #ec5242;
@@ -65,16 +66,19 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+
   /* gap: 15px; */
   background-color: var(--primary_light);
   border-radius: 8px;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 50px;
+
   /* padding: 0 15px; */
+
   /* height: 3rem; */
   position: relative;
-} 
+}
 
 .desktop-menu nav a {
   font-size: 15px;
@@ -87,7 +91,7 @@ h3 {
   width: 100px;
   position: relative;
   z-index: 1;
-} 
+}
 
 nav .animation {
   position: absolute;
@@ -96,14 +100,15 @@ nav .animation {
   top: 0;
   height: 100%;
   z-index: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 nav a:nth-child(1) {
   width: 120px;
 }
 
-nav .start-home,a:nth-child(1):hover~.animation {
+nav .start-home,
+a:nth-child(1):hover ~ .animation {
   width: 120px;
   left: 0;
 }
@@ -112,7 +117,8 @@ nav a:nth-child(2) {
   width: 100px;
 }
 
-nav .start-form,a:nth-child(2):hover~.animation {
+nav .start-form,
+a:nth-child(2):hover ~ .animation {
   width: 100px;
   left: 120px;
 }
@@ -121,7 +127,8 @@ nav a:nth-child(3) {
   width: 100px;
 }
 
-nav .start-contact,a:nth-child(3):hover~.animation {
+nav .start-contact,
+a:nth-child(3):hover ~ .animation {
   width: 100px;
   left: 220px;
 }
@@ -130,10 +137,12 @@ nav a:nth-child(4) {
   width: 100px;
 }
 
-nav .start-about,a:nth-child(4):hover~.animation {
+nav .start-about,
+a:nth-child(4):hover ~ .animation {
   width: 100px;
   left: 320px;
 }
+
 /* =======================================Header End======================================= */
 
 /* ======================================Navigation Start==================================== */
@@ -286,6 +295,7 @@ h3 {
   background-color: var(--bg_color);
   padding: 20px 65px;
 }
+
 .contact-us .title {
   font-size: 1.3em;
   text-align: center;
@@ -306,6 +316,7 @@ h3 {
   gap: 15px;
   width: 100%;
 }
+
 /* ==================================Contact-Section End================================== */
 
 /* ==================================Footer-Section Start================================== */
@@ -349,11 +360,6 @@ footer .social-icons li a {
   opacity: 0.75;
 }
 
-footer .social-icons li a:hover {
-  transform: translateY(-10px);
-  opacity: 1;
-}
-
 footer .menu li a {
   font-size: 1.2em;
   color: var(--neutral);
@@ -361,6 +367,11 @@ footer .menu li a {
   display: inline-block;
   text-decoration: none;
   opacity: 0.75;
+}
+
+footer .social-icons li a:hover {
+  transform: translateY(-10px);
+  opacity: 1;
 }
 
 footer .menu li a:hover {
