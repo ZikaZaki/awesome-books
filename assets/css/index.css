@@ -2,7 +2,6 @@
 @import url("./normalize.css");
 
 /* Importing Fonts */
-@import url('http://fonts.cdnfonts.com/css/lato');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* ******Main & Secondary Colors****** */
@@ -53,6 +52,11 @@ h3 {
   height: 5rem;
   padding: 5px 45px;
   margin: 0;
+}
+
+.header-logo img {
+  width: 180px;
+  height: 71px;
 }
 
 .desktop-menu nav {
@@ -272,6 +276,38 @@ h3 {
 
 /* =================================Books-Form-Section End================================= */
 
+/* =================================Contact-Section Start================================= */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--bg_color);
+  padding: 20px 65px;
+}
+.contact-us .title {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact-info {
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+/* ==================================Contact-Section End================================== */
+
 /* ==================================Footer-Section Start================================== */
 footer {
   font-family: var(--open-sans);
@@ -340,6 +376,12 @@ footer .menu li a:hover {
   color: var(--neutral);
   gap: 5px;
 }
+
+.footer-logo img {
+  width: 180px;
+  height: 71px;
+}
+
 /* ===================================Footer-Section End=================================== */
 
 /* ====================================Media Query Start==================================== */

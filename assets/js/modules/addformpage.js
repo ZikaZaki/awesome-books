@@ -1,16 +1,14 @@
 import Page from './page.js';
 import Book from './book.js';
-import BooksCollectionPage from './bookscollectionpage.js';
 
 class AddFormPage extends Page {
-    constructor(section, bookscollectionpage){
-        super(section);
-        this.section = section;
-        this.bookscollectionpage = bookscollectionpage;
-        // this.section = document.createElement('section');
-        this.section.classList.add('container');
-        this.section.classList.add('books-form');
-        this.section.innerHTML = `
+  constructor(section, bookscollectionpage) {
+    super(section);
+    this.section = section;
+    this.bookscollectionpage = bookscollectionpage;
+    this.section.classList.add('container');
+    this.section.classList.add('books-form');
+    this.section.innerHTML = `
         <div class="title">
             <h2>Add a new book</h2>
             <div class="underline"></div>
@@ -32,35 +30,33 @@ class AddFormPage extends Page {
                 </li>
             </ul>
         </form>`;
-        this.section.querySelector('#add_book_btn').addEventListener('click', () => {
-            const title = this.section.querySelector('#title_field').value;
-            const author = this.section.querySelector('#author_field').value;
-            if (title === '' || author === '') {
-                throw new Error('Please fill in all fields');
-            }else{
-            const book = new Book(`"${title}"`, `by ${author}`);
-            this.bookscollectionpage.add(book);
+    this.section.querySelector('#add_book_btn').addEventListener('click', () => {
+      const title = this.section.querySelector('#title_field').value;
+      const author = this.section.querySelector('#author_field').value;
+      if (title === '' || author === '') {
+        throw new Error('Please fill in all fields');
+      } else {
+        const book = new Book(`"${title}"`, `by ${author}`);
+        this.bookscollectionpage.add(book);
 
-            this.section.querySelector('#title_field').value ='';
-            this.section.querySelector('#author_field').value='';
-        }
-          });
-    }
+        this.section.querySelector('#title_field').value = '';
+        this.section.querySelector('#author_field').value = '';
+      }
+    });
+  }
 
-    addBook(){
-        const title = this.section.querySelector('#title_field').value;
-        const author = this.section.querySelector('#author_field').value;
-        if (title === '' || author === '') {
-            throw new Error('Please fill in all fields');
-        }else{
-            const book = new Book(`"${title}"`, `by ${author}`);
-            this.bookscollectionpage.add(book);
-            // booksList.add(book);
-            // renderBook(book);
-            title.value = '';
-            author.value = '';
-        }
+  addBook() {
+    const title = this.section.querySelector('#title_field').value;
+    const author = this.section.querySelector('#author_field').value;
+    if (title === '' || author === '') {
+      throw new Error('Please fill in all fields');
+    } else {
+      const book = new Book(`"${title}"`, `by ${author}`);
+      this.bookscollectionpage.add(book);
+      title.value = '';
+      author.value = '';
     }
+  }
 }
 
 export default AddFormPage;

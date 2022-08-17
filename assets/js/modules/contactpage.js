@@ -1,21 +1,28 @@
-function addFormEvents(){
-    const addBookBtn = document.querySelector('#add_book_btn');
-    addBookBtn.addEventListener('click', () => {
-        let title = document.querySelector('#title_field').value;
-        let author = document.querySelector('#author_field').value;
-        if (title === '' || author === '') {
-          throw new Error('Please fill in all fields');
-        }else{
-          title = `"${title}"`;
-          author = `by ${author}`;
-          const book = new Book(title, author);
-          booksList.add(book);
-          // renderBook(book);
-          localStorage.setItem('Books-List', JSON.stringify(booksList.books));
-          document.querySelector('#title_field').value = '';
-          document.querySelector('#author_field').value = '';
-        }
-    });
+import Page from './page.js';
+
+class ContactPage extends Page {
+  constructor(section) {
+    super(section);
+    this.section = section;
+    this.section.classList.add('container');
+    this.section.classList.add('contact-us');
+    this.section.innerHTML = `
+      <div class="title">
+        <h2>Contact Information</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="contact-info">
+          <p>
+              Do you have any questions or you just want to say "Hello"?
+              <br>You can reach out to us!
+          </p>
+          <ul class="contact-list">
+              <li>My e-mail: ziiikoooo2000@gmail.com</li>
+              <li>My phone number: +967-773-038-525</li>
+              <li>My address: Berlin Street, Sana'a City, Yemen.</li>
+          </ul>
+      </div>`;
+  }
 }
 
-export default addFormEvents;
+export default ContactPage;
