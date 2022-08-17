@@ -13,48 +13,49 @@
     <header>
         <div class="container header">
             <!-- This container is for the header section -->
+            <div class="header-logo">
+                <img src="./assets/img/logo.png" alt="header logo">
+            </div>
+            <div class="desktop-menu desktop-visible">
+                <nav>
+                    <a id="home_btn" class="menu-btn" href="#">Books List</a>
+                    <a class="menu-btn" href="#">Add new</a>
+                    <a class="menu-btn" href="#">Contact</a>
+                    <a class="menu-btn" href="#">About</a>
+                    <div class="animation start-home"></div>
+                </nav>
+            </div>
         </div>
     </header>
     <div class="container main-wrapper">
-        <div class="main-date"></div>
+        <div id="main_date" class="main-date"></div>
         <div class="main-content">
-            <section class="container books-collection">
-                <div class="title">
-                    <h1>Awesome Books</h1>
-                    <div class="underline"></div>
-                </div>
-                <div id="books_list" class="books-list">
-                    <!-- Books object will be generated using JavaScript -->
-                </div>
-            </section>
-            <section class="container books-form">
-                <div class="title">
-                    <h2>Add a new book</h2>
-                    <div class="underline"></div>
-                </div>
-                <form action="#">
-                    <ul class="form-list">
-                        <li class="form-item">
-                            <label for="title_field" hidden>Title</label>
-                            <input id="title_field" type="text" placeholder="Title" maxlength="100" required />
-                        </li>
-                        <li class="form-item">
-                            <label for="author_field" hidden>Author</label>
-                            <input id="author_field" type="text" placeholder="Author" maxlength="200" required />
-                        </li>
-                        <li class="form-item">
-                            <button id="add_book_btn" class="normal-btn" type="submit">
-                      Add
-                    </button>
-                        </li>
-                    </ul>
-                </form>
-            </section>
+        <!-- The content will be created dynamically using JavaScripts -->
         </div>
     </div>
-    <footer class="container"></footer>
+    <footer>
+        <ul class="social-icons">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">BOOKS LIST</a></li>
+            <li><a href="#">ADD NEW</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+        <div class="footer-logo">
+            <img src="./assets/img/logo.png" alt="footer logo">
+            <p>&COPY; 2022 ZikaZaki Awesome Books | All Rights Reserved</p>
+        </div>
+    </footer>
     <!-- JavaScript Files -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
+
 </body>
 
 </html>
