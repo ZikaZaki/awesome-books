@@ -30,7 +30,7 @@ export default class Navigation {
   }
 
   addClickEventListener() {
-    for (let i = 0; i < this.menuBtns.length; i + 1) {
+    for (let i = 0; i < this.menuBtns.length; i += 1) {
       this.menuBtns[i].addEventListener('click', (e) => {
         this.clickMenuBtns(e);
       });
