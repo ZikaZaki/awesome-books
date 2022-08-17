@@ -1,8 +1,8 @@
-/* Importing Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 /* Importing the "normalize.css" file which is for resetting all the default css values */
 @import url("./normalize.css");
+
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* ******Main & Secondary Colors****** */
 :root {
