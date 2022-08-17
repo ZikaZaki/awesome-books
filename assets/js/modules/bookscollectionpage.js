@@ -33,8 +33,7 @@ class BooksCollectionPage extends Page {
       e.target.parentNode.parentNode.querySelector('.book-author h3').innerText,
     );
     // Remove book from the list
-    const list = this.bookslist.filter((b) => (b.title !== book.title && b.author !== book.author));
-    this.bookslist = list;
+    this.bookslist = this.bookslist.filter((b) => (b.title !== book.title && b.author !== book.author));
     this.count -= 1;
     // Reset Local Storage
     localStorage.setItem('Books-List', JSON.stringify(this.bookslist));
