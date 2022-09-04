@@ -7,7 +7,6 @@
 
 > The **Awesome Books** project is part of my **Microverse** exercises, where we build a simple website that displays a list of books and allows you to add and remove books from that list. By building this application, we will learn how to manage data using JavaScript. Thanks to that the website will be more interactive. We will also use a medium-fidelity **wireframe** to build the UI. However, we will focus here on the core functionalities and ignoring how the website looks. At the very beginning the website will look similar to the wireframe UI. Note that it is plain HTML with no styling, but it will allow you to add and remove books from the list! the goal here is to master and focus on best practices and professional **Simple and Thorough** shared traits.
 
-
 ## Built With ⚙️
 
 - [x] Languages:  JavaScript, HTML, CSS
