@@ -7,7 +7,8 @@
 /* ******Main & Secondary Colors****** */
 :root {
   --bg_color: #fff;
-  --primary: #2c3e50;
+  --dark-indigo: #2c3e50;
+  --light-indigo: #34495e;
 
   /* --primary: #202c38; */
   --primary_light: #34495e;
